@@ -1,8 +1,5 @@
 ### Face Recognition Using LBPH Recognizer
 
-
-In this walk through I have performed face recognition on celeb_face dataset. The dataset is divided into train and val . Train has 290 images and validation has 90 images. By using Local binary pattern histogram recognizer model,  I have performed face recognition. 
-
 For face detection, I used the haarcascade frontal face model. The model is a xml file having data stored in it. Opencv provides the CascadeClassifier that imports models from github. Further I have to give input images to the haar cascade model to detect the faces from the images, then these detected faces have been used in face recognition.
 
 Once our detection process is done, now I have applied the LBPH (Local binary pattern histogram) recognizer on images. Using LBPH images are converted into Local binary patterns, further these pattern images are used to create the histograms, then i train our model. Further when i input an image, it’s Histogram is compared with trained images histograms. A threshold value is set if the distance between the two histograms is greater than the threshold then the best match is the output. In this model I'm able to get an accuracy of 71% on train and 95% on validation.
